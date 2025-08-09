@@ -1,3 +1,8 @@
+/*
+Input files used for completing the task:
+https://drive.google.com/drive/folders/13Ra1PQuOT5Nv5HVb2ygrW2QAKBsqv6uY
+*/
+
 --Using MS-SQL Server (SSMS tool)
 
 --TASK_1:
