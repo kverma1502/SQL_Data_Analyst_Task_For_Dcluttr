@@ -187,16 +187,13 @@ SELECT
     s.category_name,
     s.sub_category_id,
     s.sub_category_name,
-    
     s.est_qty_sold,
     s.est_qty_sold * ISNULL(p.sp, 0) AS est_sales_sp,
     s.est_qty_sold * ISNULL(m.mrp, 0) AS est_sales_mrp,
-
     ISNULL(l.listed_ds_count, 0),
     d.ds_count,
     CAST(1.0 * ISNULL(i.in_stock_store_count, 0) / NULLIF(d.ds_count, 0) AS FLOAT) AS wt_osa,
     CAST(1.0 * ISNULL(i.in_stock_store_count, 0) / NULLIF(l.listed_ds_count, 0) AS FLOAT) AS wt_osa_ls,
-
     m.mrp,
     p.sp,
     CAST(1.0 * (ISNULL(m.mrp, 0) - ISNULL(p.sp, 0)) / NULLIF(m.mrp, 0) AS FLOAT) AS discount
